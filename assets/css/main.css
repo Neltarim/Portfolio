@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Valorant";
+  src: url("/fonts/Valorant.ttf") format("truetype");
+  font-weight: 400; /* only one weight available */
+  font-style: normal;
+  font-display: swap;
+}
