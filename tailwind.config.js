@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      direction: {
+        rtl: 'rtl',
+        ltr: 'ltr',
+      },
       fontFamily: {
         valorant: ['"Valorant"', "sans-serif"],
         kdam: ['"Kdam Thmor Pro"', "sans-serif"]
@@ -65,6 +69,8 @@ module.exports = {
         'red-light':  '#EB4A4A',
         'blue':       '#80E1D6',
         'grey':       '#001424',
+        'grey-dark':  '#272727',
+        'grey-light': '#BFBFBF',
 
         'white'         : '#FFFFFF',
 
@@ -74,7 +80,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.rtl': { direction: 'rtl' },
+        '.ltr': { direction: 'ltr' }
+      })
+    }
+  ],
   safelist: [{
     pattern: /(bg|text|border)-(blue|pink|yellow|green)/
     }

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between md:bg-gradient-to-t from-black/0 to-grey w-full fixed top-0 z-50">
+  <div class="flex justify-between bg-gradient-to-t from-black/0 to-grey w-full fixed top-0 z-50">
     <p class="text-4xl px-8 py-6  lg:text-5xl xl:text-6xl font-valorant text-red-light">Am</p>
 
     <p 
@@ -76,9 +76,89 @@
     </div>
   </section>
   
+  <section id="tech" data-section="tech" class="h-screen relative bg-grey-dark py-20">
+    <img class="absolute right-0 -top-14" src="/assets/images/notch.svg" alt="">
+    <div class="text-2xl sm:text-3xl font-kdam text-center">
+      <p class="text-white"><span class="text-blue">.//</span> MES TECHNOLOGIES</p>
+    </div>
 
-  <section id="tech" data-section="tech" class="h-screen">TECH</section>
-  <section id="historique" data-section="historique" class="h-screen">HISTORIQUE</section>
+
+
+  </section>
+
+  <section id="historique" data-section="historique" class="min-h-screen py-20">
+    <div class="text-2xl sm:text-3xl font-kdam text-center">
+      <p class="text-white"><span class="text-blue">.//</span> MON HISTORIQUE</p>
+    </div>
+
+    <div class="mt-10 text-white font-kdam tracking-wide">
+
+      <HistoryLine :alignRight="true" :sepSize="'big'">
+        <h3 class="text-2xl mb-4">GROUPE WE</h3>
+        <p class="text-grey-light mb-4">Mars 2023 - Aujourd’hui , Marcoussis 91460 </p>
+        <p>
+          Développement de divers applications et sites web dont :
+        </p>
+        <ul class="list-disc ml-6 mb-4">
+          <li>Un outil interne pour la recherche et suivi de marchés publiques</li>
+          <li>plusieurs sites vitrines pour présenter chaque filiales du groupe et établir une image publique</li>
+          <li>Webapp de commande et demande de devis en ligne pour des produits B2B</li>
+        </ul>
+        <p>
+          Mise en place d’un CRM et développement de features essentielles au fonctionnement de l’entreprise
+        </p>
+      </HistoryLine>
+
+      <HistoryLine :sepSize="'medium'">
+        <h3 class="text-2xl mb-4">Pin-Pon DEV</h3>
+        <p class="text-grey-light mb-4">Mars 2022 - Février 2023 , Saint-Michel-sur-Orge 91240 </p>
+        <ul class="my-2 list-disc lg:mr-6 lg:rtl ltr mr-0 mb-4">
+          <li class="my-4">Développement et bug fixing sur la plateforme supercard.fr</li>
+          <li>Création d’une webapp Nuxt à destination des chargés d’insertion du département de l’Isère</li>
+          <li class="my-4">Migration d’une plateforme réseau d’unniversité sous kubernetes</li>
+        </ul>
+      </HistoryLine>
+
+      <HistoryLine :alignRight="true" :sepSize="'light'">
+        <h3 class="text-2xl mb-4">Aybo Conseil </h3>
+        <p class="text-grey-light mb-4">Décembre 2021 - Janvier 2021, Paris, 75008 </p>
+        <p>
+          Finalisation du développement d’outils internes, plateformes intranet.
+        </p>
+      </HistoryLine>
+
+      <HistoryLine :sepSize="'medium'">
+        <h3 class="text-2xl mb-4">Made in Paris</h3>
+        <p class="text-grey-light mb-4">Décembre 2021 - Janvier 2021, Paris, 75008</p>
+        <p>
+          Développement de divers projets dans le domaine de la food Tech : 
+        </p>
+        <ul class="my-2 list-disc lg:mr-6 lg:rtl ltr mr-0 mb-4">
+          <li class="my-4">Création d’API Django REST framework</li>
+          <li>Développement de webapps avec VueJS et Tailwind</li>
+        </ul>
+      </HistoryLine>
+
+      <HistoryLine :alignRight="true" :sepSize="'light'">
+        <h3 class="text-2xl mb-4">Freelance </h3>
+        <p class="text-grey-light mb-4">Nov 2020 à Mars 2021, Saint-Michel-sur-Orge 91240</p>
+        <ul class="list-disc ml-6 mb-4">
+          <li class="my-4">Création de sites web pour petites entreprises.</li>
+          <li>Conception et création d’une plateforme de mise en relation pour collectionneurs Pop culture.</li>
+        </ul>
+      </HistoryLine>
+
+      <HistoryLine :sepSize="'light'">
+        <h3 class="text-2xl mb-4">Cabinet BME&C</h3>
+        <p class="text-grey-light mb-4">Juin 2018 - Dec 2019, Achères 78260 </p>
+        <ul class="my-2 list-disc lg:mr-6 lg:rtl ltr mr-0 mb-4">
+          <li class="my-4">Installation et administration de deux serveurs d'applications RDP</li>
+          <li>Administration de l'infrastructure logistique matériel et réseau.</li>
+        </ul>
+      </HistoryLine>
+
+    </div>
+  </section>
   <section id="hobby" data-section="hobby" class="h-screen">HOBBY</section>
   <section id="contact" data-section="contact" class="h-screen">CONTACT</section>
 </template>
@@ -88,35 +168,27 @@ export default {
   data() {
     return {
       current: 'home',
-      observer: null,
       sections: ['home', 'tech', 'historique', 'hobby', 'contact'],
       slideOpen: false,
+      sectionEls: [], // stockera les éléments DOM des sections
     }
   },
   mounted() {
-    // Scroll-spy via IntersectionObserver
-    this.observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('data-section')
-            if (id) this.current = id
-          }
-        })
-      },
-      {
-        threshold: 0.6,
-        rootMargin: '-80px 0px -20% 0px',
-      }
-    )
+    // Récupérer les éléments <section data-section="...">
+    this.sectionEls = this.sections
+      .map((id) => document.querySelector(`[data-section="${id}"]`))
+      .filter(Boolean)
 
-    this.sections.forEach((id) => {
-      const el = document.querySelector(`[data-section="${id}"]`)
-      if (el) this.observer.observe(el)
-    })
+    // Lancer une première détection
+    this.updateCurrentSection()
+
+    // Scroll & resize
+    window.addEventListener('scroll', this.updateCurrentSection, { passive: true })
+    window.addEventListener('resize', this.updateCurrentSection)
   },
   beforeUnmount() {
-    if (this.observer) this.observer.disconnect()
+    window.removeEventListener('scroll', this.updateCurrentSection)
+    window.removeEventListener('resize', this.updateCurrentSection)
   },
   methods: {
     navClass(id) {
@@ -125,15 +197,43 @@ export default {
       const active =    'text-red underline decoration-red underline-offset-8 decoration-2'
       return `${base} ${this.current === id ? active : inactive}`
     },
+
+    updateCurrentSection() {
+      if (!this.sectionEls.length) return
+
+      const viewportHeight = window.innerHeight
+      const headerOffset = 96 // tu as scroll-margin-top: 96px; sur les sections
+      const targetY = viewportHeight * 0.3 // ligne de référence à 30% du viewport
+
+      let activeId = this.current
+
+      // On cherche la section qui recouvre la ligne targetY
+      for (const el of this.sectionEls) {
+        const rect = el.getBoundingClientRect()
+        const top  = rect.top
+        const bottom = rect.bottom
+
+        if (top - headerOffset <= targetY && bottom > targetY) {
+          const id = el.getAttribute('data-section')
+          if (id) activeId = id
+          break
+        }
+      }
+
+      this.current = activeId
+    },
+
     async scrollTo(id) {
       const el = document.getElementById(id)
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      await setTimeout(() => {this.slideOpen = false}, 700)
-      
+      await setTimeout(() => {
+        this.slideOpen = false
+      }, 700)
     },
   },
 }
 </script>
+
 
 <style>
 html {
