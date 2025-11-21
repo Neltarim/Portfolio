@@ -76,13 +76,73 @@
     </div>
   </section>
   
-  <section id="tech" data-section="tech" class="h-screen relative bg-grey-dark py-20">
+  <section id="tech" data-section="tech" class="relative bg-grey-dark py-20">
     <img class="absolute right-0 -top-14" src="/assets/images/notch.svg" alt="">
     <div class="text-2xl sm:text-3xl font-kdam text-center">
       <p class="text-white"><span class="text-blue">.//</span> MES TECHNOLOGIES</p>
     </div>
 
+    <div class="flex justify-center text-white items-center font-kdam py-20 gap-20">
+      <div class="flex justify-end w-1/2">
+        <div class="flex justify-end rtl gap-10">
+          <img src="/assets/icons/figma.svg" alt="">
+        </div>        
+      </div>
 
+      <div class="w-1/2">
+        <h3 class="text-2xl mb-4"><span class="text-blue">.</span>DESIGN</h3>
+        <p class="text-lg text-grey-light w-1/2">
+          Après avoir établi un cahier des charges complets pour un projet, 
+          je créé une maquette sur figma, permettant de voir tout de suite 
+          ce à quoi va ressembler le projet une fois développé et établir 
+          une direction artistique claire.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex justify-center text-white items-center font-kdam py-20 gap-20">
+      <div class="flex justify-end w-1/2">
+        <div class="flex justify-end rtl gap-10">
+          <img src="/assets/icons/node.svg" alt="">
+          <img src="/assets/icons/nuxt.svg" alt="">
+          <img src="/assets/icons/python.svg" alt="">
+        </div>        
+      </div>
+
+      <div class="w-1/2">
+        <h3 class="text-2xl mb-4"><span class="text-blue">.</span>BACK_END</h3>
+        <p class="text-lg text-grey-light w-1/2">
+          Toute bonne application à besoin d’un bon backend qui répond 
+          directement aux besoins frontend. C’est pourquoi je travail 
+          principalement avec Nuxt.js. Il permet d’unir le front et le 
+          back dans un même projet, tout en permettant une architecture 
+          API REST propre et efficace. Je maitrise aussi python avec django 
+          lorsqu’il est nécessaire.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex justify-center text-white items-center font-kdam py-20 gap-20">
+      <div class="flex justify-end w-1/2">
+        <div class="flex justify-end rtl gap-10">
+          <img src="/assets/icons/tailwind.svg" alt="">
+          <img src="/assets/icons/vue.svg" alt="">
+        </div>        
+      </div>
+
+      <div class="w-1/2">
+        <h3 class="text-2xl mb-4"><span class="text-blue">.</span>FRONT_END</h3>
+        <p class="text-lg text-grey-light w-1/2">
+          Le front end est crucial pour attirer l’oeil de l’utilisateur et 
+          lui offrir une UX belle et intuitive. C’est pourquoi je travail 
+          avec Vue.js qui permet une architecture SFC (single file component) 
+          donnant accès à des composants réutilisables, couplés avec Pinia 
+          Store pour avoir accès au core système de l’app depuis n’importe 
+          quel composants. De pair avec tailwind, cette stack me permet de 
+          développer rapidement une interface pratique.
+        </p>
+      </div>
+    </div>
 
   </section>
 
