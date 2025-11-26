@@ -219,7 +219,41 @@
 
     </div>
   </section>
-  <section id="hobby" data-section="hobby" class="h-screen">HOBBY</section>
+  
+  <section id="tech" data-section="tech" class="relative bg-grey-dark font-kdam py-20">
+    <img class="absolute left-0 scale-x-[-1] -top-14" src="/assets/images/notch.svg" alt="">
+    <div class="text-2xl sm:text-3xl font-kdam text-center">
+      <p class="text-white"><span class="text-blue">.//</span> UN DÉVELOPPEUR PASSIONNÉ</p>
+    </div>
+
+    <p class="text-white mx-auto tracking-wide w-1/3 mt-20">
+      J’ai toujours été animé par les domaines créatifs. Programmation, cinéma, jeux vidéo ou, plus récemment, la peinture : 
+      <br /><br />
+      chaque discipline nourrit ma passion de donner vie à des idées. Ce qui m’inspire avant tout, c’est ce processus de création - partir d’une simple idée ou un besoin, et la transformer en quelque chose de concret et unique. 
+      <br /><br />
+      Créer est pour moi plus qu’une activité, c’est mon terrain de confort.
+    </p>
+
+    <div class="flex justify-center gap-10 mt-20">
+      <img 
+        class="w-20"
+        v-for="icon in ['controller', 'code', 'warhammer', 'twitch', 'youtube']" 
+        :src="`/icons/${icon}.svg`" alt=""
+      >
+    </div>
+
+    <div class="flex mt-20">
+      <div class="mx-auto w-1/2">
+        <Carousel />
+      </div>
+      <div class="mx-auto w-1/2">
+        <p>
+          
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" data-section="contact" class="h-screen">CONTACT</section>
 </template>
 
