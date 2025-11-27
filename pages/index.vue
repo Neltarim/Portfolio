@@ -82,16 +82,16 @@
       <p class="text-white"><span class="text-blue">.//</span> MES TECHNOLOGIES</p>
     </div>
 
-    <div class="flex justify-center text-white items-center font-kdam py-20 gap-20">
-      <div class="flex justify-end w-1/2">
+    <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
+      <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img src="/assets/icons/figma.svg" alt="">
+          <img class="w-[6rem] xl:w-auto" src="/assets/icons/figma.svg" alt="">
         </div>        
       </div>
 
-      <div class="w-1/2">
+      <div class="mt-10 mx-4 text-center lg:text-start lg:w-1/2">
         <h3 class="text-2xl mb-4"><span class="text-blue">.</span>DESIGN</h3>
-        <p class="text-lg text-grey-light w-1/2">
+        <p class="mx-6 md:mx-0 text-lg text-grey-light lg:w-1/2">
           Après avoir établi un cahier des charges complets pour un projet, 
           je créé une maquette sur figma, permettant de voir tout de suite 
           ce à quoi va ressembler le projet une fois développé et établir 
@@ -100,39 +100,39 @@
       </div>
     </div>
 
-    <div class="flex justify-center text-white items-center font-kdam py-20 gap-20">
-      <div class="flex justify-end w-1/2">
+    <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
+      <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img src="/assets/icons/node.svg" alt="">
-          <img src="/assets/icons/nuxt.svg" alt="">
-          <img src="/assets/icons/python.svg" alt="">
-        </div>        
+          <img class="w-[6rem] xl:w-auto" src="/assets/icons/node.svg" alt="">
+          <img class="w-[6rem] xl:w-auto" src="/assets/icons/nuxt.svg" alt="">
+          <img class="w-[6rem] xl:w-auto" src="/assets/icons/python.svg" alt="">
+        </div>
       </div>
 
-      <div class="w-1/2">
+      <div class="mt-10 mx-4 text-center lg:text-start lg:w-1/2">
         <h3 class="text-2xl mb-4"><span class="text-blue">.</span>BACK_END</h3>
-        <p class="text-lg text-grey-light w-1/2">
-          Toute bonne application à besoin d’un bon backend qui répond 
-          directement aux besoins frontend. C’est pourquoi je travail 
+        <p class="text-lg text-grey-light lg:w-1/2">
+          Toute bonne application a besoin d’un bon backend qui répond 
+          directement aux besoins frontend. C’est pourquoi je travaille 
           principalement avec Nuxt.js. Il permet d’unir le front et le 
           back dans un même projet, tout en permettant une architecture 
-          API REST propre et efficace. Je maitrise aussi python avec django 
+          API REST propre et efficace. Je maîtrise aussi Python avec Django 
           lorsqu’il est nécessaire.
         </p>
       </div>
     </div>
 
-    <div class="flex justify-center text-white items-center font-kdam py-20 gap-20">
-      <div class="flex justify-end w-1/2">
+    <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
+      <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img src="/assets/icons/tailwind.svg" alt="">
-          <img src="/assets/icons/vue.svg" alt="">
+          <img class="w-[6rem] xl:w-auto" src="/assets/icons/tailwind.svg" alt="">
+          <img class="w-[6rem] xl:w-auto" src="/assets/icons/vue.svg" alt="">
         </div>        
       </div>
 
-      <div class="w-1/2">
+      <div class="mt-10 mx-4 text-center lg:text-start lg:w-1/2">
         <h3 class="text-2xl mb-4"><span class="text-blue">.</span>FRONT_END</h3>
-        <p class="text-lg text-grey-light w-1/2">
+        <p class="text-lg text-grey-light lg:w-1/2">
           Le front end est crucial pour attirer l’oeil de l’utilisateur et 
           lui offrir une UX belle et intuitive. C’est pourquoi je travail 
           avec Vue.js qui permet une architecture SFC (single file component) 
@@ -145,6 +145,7 @@
     </div>
 
   </section>
+
 
   <section id="historique" data-section="historique" class="min-h-screen py-20">
     <div class="text-2xl sm:text-3xl font-kdam text-center">
