@@ -226,7 +226,7 @@
       <p class="text-white"><span class="text-blue">.//</span> UN DÉVELOPPEUR PASSIONNÉ</p>
     </div>
 
-    <p class="text-white mx-auto tracking-wide w-1/3 mt-20">
+    <p class="text-white mx-10 xl:mx-auto tracking-wide xl:w-1/3 mt-20">
       J’ai toujours été animé par les domaines créatifs. Programmation, cinéma, jeux vidéo ou, plus récemment, la peinture : 
       <br /><br />
       chaque discipline nourrit ma passion de donner vie à des idées. Ce qui m’inspire avant tout, c’est ce processus de création - partir d’une simple idée ou un besoin, et la transformer en quelque chose de concret et unique. 
@@ -236,19 +236,22 @@
 
     <div class="flex justify-center gap-10 mt-20">
       <img 
-        class="w-20"
+        class="w-10 xl:w-20"
         v-for="icon in ['controller', 'code', 'warhammer', 'twitch', 'youtube']" 
         :src="`/icons/${icon}.svg`" alt=""
       >
     </div>
 
-    <div class="flex mt-20">
-      <div class="mx-auto w-1/2">
+    <div class="xl:flex mt-20">
+      <div class="mx-auto w-4/5 xl:w-1/2">
         <Carousel />
       </div>
-      <div class="mx-auto w-1/2">
-        <p>
-          
+      <div class="mx-auto mt-20 xl:mt-0 xl:w-1/2 relative">
+        <p class="mx-10 xl:mx-40 tracking-wide text-lg text-grey-light flex xl:top-1/3 xl:absolute text-center">
+          La peinture de figurines m'offre une vraie parenthèse dans mon quotidien de développeur.
+          J'aime travailler la lumière, les couleurs et les détails pour donner vie à une pièce.
+
+          C'est un équilibre simple entre technique et créativité, et un moyen efficace de me recentrer.
         </p>
       </div>
     </div>

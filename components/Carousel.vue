@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-28 relative">
+  <div class="mx-6 xl:mr-0 xl:ml-28 relative">
     <ClientOnly>
       <Swiper
         :modules="[SwiperAutoplay, SwiperPagination, SwiperNavigation]"
