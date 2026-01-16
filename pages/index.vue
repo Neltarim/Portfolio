@@ -221,7 +221,7 @@
     </div>
   </section>
   
-  <section id="tech" data-section="tech" class="relative bg-grey-dark font-kdam py-20">
+  <section id="hobby" data-section="hobby" class="relative bg-grey-dark font-kdam py-20">
     <img class="absolute left-0 scale-x-[-1] -top-14" src="/assets/images/notch.svg" alt="">
     <div class="text-2xl sm:text-3xl font-kdam text-center">
       <p class="text-white"><span class="text-blue">.//</span> UN DÉVELOPPEUR PASSIONNÉ</p>
@@ -258,7 +258,25 @@
     </div>
   </section>
 
-  <section id="contact" data-section="contact" class="h-screen">CONTACT</section>
+  <section id="contact" data-section="contact" class="my-20">
+    <div class="text-2xl sm:text-3xl font-kdam text-center mb-20 lg:mb-40">
+      <p class="text-white"><span class="text-blue">.//</span> POUR ME CONTACTER</p>
+    </div>
+    <div class="w-full lg:flex justify-center gap-20 text-white font-kdam pb-20">
+      <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
+        <img class="mx-auto" src="/assets/icons/email.svg" alt="">
+        <p>a.mayer.devpro@gmail.com</p>
+      </div>
+      <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
+        <img class="mx-auto" src="/assets/icons/phone.svg" alt="">
+        <p>06 21 59 63 82</p>
+      </div>
+      <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
+        <img class="mx-auto" src="/assets/icons/linkedin.svg" alt="">
+        <p>www.linkedin.com/in/alexandre-mayer</p>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -268,7 +286,7 @@ export default {
       current: 'home',
       sections: ['home', 'tech', 'historique', 'hobby', 'contact'],
       slideOpen: false,
-      sectionEls: [], // stockera les éléments DOM des sections
+      sectionEls: [],
     }
   },
   mounted() {
@@ -305,10 +323,10 @@ export default {
 
       let activeId = this.current
 
-      // On cherche la section qui recouvre la ligne targetY
+      // 1) logique normale : on cherche la section qui croise la ligne targetY
       for (const el of this.sectionEls) {
         const rect = el.getBoundingClientRect()
-        const top  = rect.top
+        const top = rect.top
         const bottom = rect.bottom
 
         if (top - headerOffset <= targetY && bottom > targetY) {
@@ -316,6 +334,15 @@ export default {
           if (id) activeId = id
           break
         }
+      }
+
+      // 2) cas particulier : on est en bas de page -> forcer "contact"
+      const scrollY = window.scrollY || window.pageYOffset
+      const docHeight = document.documentElement.scrollHeight
+      const scrolledToBottom = scrollY + viewportHeight >= docHeight - 5 // marge pour éviter les arrondis
+
+      if (scrolledToBottom) {
+        activeId = 'contact' // uniquement ce dernier
       }
 
       this.current = activeId
@@ -335,6 +362,7 @@ export default {
 
 <style>
 html {
+  background-color: #001622;
   background-image: url('/assets/images/main_background.png');
   background-attachment: fixed;
   background-size: cover;
