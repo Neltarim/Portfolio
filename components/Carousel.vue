@@ -15,8 +15,8 @@
           prevEl: '.prev-btn'
         }"
         class="h-full"
-        data-aos="fade-up"
-        data-aos-delay="800"
+        data-aos="fade"
+        data-aos-delay="200"
         data-aos-duration="1000"
       >
         <img class="absolute z-2 top-0 left-0" src="/assets/icons/image_corner.svg" alt="">

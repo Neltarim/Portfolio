@@ -57,6 +57,7 @@
           <div class="text-xl sm:text-3xl mt-24 text-center">
             <p class="text-white"><span class="text-blue">.//</span> Créateur D'expériences digitales</p>
             <button
+             data-aos="fade" data-aos-delay="200" 
               class="
                 relative inline-block h-[5rem] w-[16rem] sm:h-[6rem] sm:w-[16rem]
                 text-black text-xl sm:text-2xl
@@ -85,7 +86,7 @@
     <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
       <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/figma.svg" alt="">
+          <img data-aos="fade-right" class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/figma.svg" alt="">
         </div>        
       </div>
 
@@ -103,9 +104,9 @@
     <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
       <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/node.svg" alt="">
-          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/nuxt.svg" alt="">
-          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/python.svg" alt="">
+          <img data-aos="fade-right" data-aos-delay="100" class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/node.svg" alt="">
+          <img data-aos="fade-right" data-aos-delay="300" class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/nuxt.svg" alt="">
+          <img data-aos="fade-right" data-aos-delay="500" class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/python.svg" alt="">
         </div>
       </div>
 
@@ -125,8 +126,8 @@
     <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
       <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/tailwind.svg" alt="">
-          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/vue.svg" alt="">
+          <img data-aos="fade-right" data-aos-delay="100" class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/tailwind.svg" alt="">
+          <img data-aos="fade-right" data-aos-delay="300" class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/vue.svg" alt="">
         </div>        
       </div>
 
@@ -237,8 +238,9 @@
 
     <div class="flex justify-center gap-4 md:gap-10 mt-20">
       <img 
+         data-aos="fade-left" :data-aos-delay="200 * index"
         class="w-10 xl:w-20"
-        v-for="icon in ['controller', 'code', 'warhammer', 'twitch', 'youtube']" 
+        v-for="icon, index in ['controller', 'code', 'warhammer', 'twitch', 'youtube']" 
         :src="`/icons/${icon}.svg`" alt=""
       >
     </div>
@@ -264,15 +266,15 @@
     </div>
     <div class="w-full lg:flex justify-center gap-20 text-white font-kdam pb-20">
       <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
-        <img class="mx-auto" src="/assets/icons/email.svg" alt="">
+        <img data-aos="fade" data-aos-delay="100" class="mx-auto" src="/assets/icons/email.svg" alt="">
         <p>a.mayer.devpro@gmail.com</p>
       </div>
       <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
-        <img class="mx-auto" src="/assets/icons/phone.svg" alt="">
+        <img data-aos="fade" data-aos-delay="200"  class="mx-auto" src="/assets/icons/phone.svg" alt="">
         <p>06 21 59 63 82</p>
       </div>
       <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
-        <img class="mx-auto" src="/assets/icons/linkedin.svg" alt="">
+        <img data-aos="fade" data-aos-delay="300"  class="mx-auto" src="/assets/icons/linkedin.svg" alt="">
         <p>www.linkedin.com/in/alexandre-mayer</p>
       </div>
     </div>
