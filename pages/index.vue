@@ -85,7 +85,7 @@
     <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
       <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img class="w-[6rem] xl:w-auto" src="/assets/icons/figma.svg" alt="">
+          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/figma.svg" alt="">
         </div>        
       </div>
 
@@ -103,9 +103,9 @@
     <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
       <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img class="w-[6rem] xl:w-auto" src="/assets/icons/node.svg" alt="">
-          <img class="w-[6rem] xl:w-auto" src="/assets/icons/nuxt.svg" alt="">
-          <img class="w-[6rem] xl:w-auto" src="/assets/icons/python.svg" alt="">
+          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/node.svg" alt="">
+          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/nuxt.svg" alt="">
+          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/python.svg" alt="">
         </div>
       </div>
 
@@ -125,8 +125,8 @@
     <div class="lg:flex justify-center text-white items-center font-kdam py-20 gap-20">
       <div class="flex justify-center lg:justify-end lg:w-1/2">
         <div class="flex justify-end rtl gap-10">
-          <img class="w-[6rem] xl:w-auto" src="/assets/icons/tailwind.svg" alt="">
-          <img class="w-[6rem] xl:w-auto" src="/assets/icons/vue.svg" alt="">
+          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/tailwind.svg" alt="">
+          <img class="w-[4rem] md:w-[6rem] xl:w-auto" src="/assets/icons/vue.svg" alt="">
         </div>        
       </div>
 
@@ -235,7 +235,7 @@
       Créer est pour moi plus qu’une activité, c’est mon terrain de confort.
     </p>
 
-    <div class="flex justify-center gap-10 mt-20">
+    <div class="flex justify-center gap-4 md:gap-10 mt-20">
       <img 
         class="w-10 xl:w-20"
         v-for="icon in ['controller', 'code', 'warhammer', 'twitch', 'youtube']" 

@@ -23,21 +23,21 @@
         <img class="absolute z-2 scale-[-1] right-0 bottom-0" src="/assets/icons/image_corner.svg" alt="">
 
         <SwiperSlide v-for="(item, index) in items" :key="index">
-          <img class="z-1" :src="item" alt="">
+          <img class="z-1 scale-[0.99]" :src="item" alt="">
         </SwiperSlide>
       </Swiper>
     </ClientOnly>
 
     <button 
-      class="prev-btn absolute -left-16 top-1/2 -translate-y-1/2 z-20"
+      class="prev-btn absolute -left-10 md:-left-16 top-1/2 -translate-y-1/2 z-20"
     >
-      <img src="/assets/icons/arrow_able.svg" class="smooth scale-x-[-1] opacity-60 hover:opacity-100" />
+      <img src="/assets/icons/arrow_able.svg" class="smooth w-5 md:w-auto scale-x-[-1] opacity-60 hover:opacity-100" />
     </button>
 
     <button 
-      class="next-btn absolute -right-16 top-1/2 -translate-y-1/2 z-20"
+      class="next-btn absolute -right-10 md:-right-16 top-1/2 -translate-y-1/2 z-20"
     >
-      <img src="/assets/icons/arrow_able.svg" class="smooth opacity-60 hover:opacity-100" />
+      <img src="/assets/icons/arrow_able.svg" class="smooth w-5 md:w-auto opacity-60 hover:opacity-100" />
     </button>
 
     <div class="custom-pagination z-2 flex justify-center mt-4"></div>
