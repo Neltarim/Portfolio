@@ -56,16 +56,21 @@
 
           <div class="text-xl sm:text-3xl mt-24 text-center">
             <p class="text-white"><span class="text-blue">.//</span> Créateur D'expériences digitales</p>
-            <button
-             data-aos="fade" data-aos-delay="200" 
+            <a
+              data-aos="fade"
+              data-aos-delay="200"
               class="
-                relative inline-block h-[5rem] w-[16rem] sm:h-[6rem] sm:w-[16rem]
+                relative inline-block
+                h-[5rem] w-[16rem] sm:h-[6rem] sm:w-[16rem]
                 text-black text-xl sm:text-2xl
                 glow-btn
+                flex items-center justify-center mx-auto
               "
+              href="#tech"
             >
               En savoir plus
-            </button>
+            </a>
+
 
           </div>
 
@@ -370,6 +375,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  scroll-behavior: smooth;
 }
 
 /* Transition util */
