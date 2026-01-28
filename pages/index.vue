@@ -267,7 +267,7 @@
     <div class="w-full lg:flex justify-center gap-20 text-white font-kdam pb-20">
       <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
         <img data-aos="fade" data-aos-delay="100" class="mx-auto" src="/assets/icons/email.svg" alt="">
-        <p>a.mayer.devpro@gmail.com</p>
+        <p>contact@almayer.fr</p>
       </div>
       <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
         <img data-aos="fade" data-aos-delay="200"  class="mx-auto" src="/assets/icons/phone.svg" alt="">
@@ -275,7 +275,7 @@
       </div>
       <div class="lg:flex gap-8 text-center items-center mb-10 lg:mb-0">
         <img data-aos="fade" data-aos-delay="300"  class="mx-auto" src="/assets/icons/linkedin.svg" alt="">
-        <p>www.linkedin.com/in/alexandre-mayer</p>
+        <a target="about.blank" href="https://linkedin.com/in/alexandre-mayer">www.linkedin.com/in/alexandre-mayer</a>
       </div>
     </div>
   </section>

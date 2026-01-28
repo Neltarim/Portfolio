@@ -1,10 +1,10 @@
 const client_manifest = {
-  "_26h28o21.js": {
+  "_BOF0Xsph.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "26h28o21.js",
+    "file": "BOF0Xsph.js",
     "name": "v3",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -36,13 +36,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "qzBH-Sog.js",
+    "file": "CFr4dm-7.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_26h28o21.js"
+      "_BOF0Xsph.js"
     ],
     "css": []
   },
@@ -57,13 +57,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "D0pj44Cf.js",
+    "file": "DsSet13X.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_26h28o21.js"
+      "_BOF0Xsph.js"
     ],
     "css": []
   },
@@ -78,7 +78,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DzMm6mVP.js",
+    "file": "BehZfsVZ.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -86,14 +86,23 @@ const client_manifest = {
       "node_modules/nuxt/dist/app/components/error-404.vue",
       "node_modules/nuxt/dist/app/components/error-500.vue"
     ],
+    "css": [
+      "entry.DvB2Xm2x.css"
+    ],
     "_globalCSS": true
+  },
+  "entry.DvB2Xm2x.css": {
+    "file": "entry.DvB2Xm2x.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
   },
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "C6YmRA-D.js",
+    "file": "Ci0E9A98.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
