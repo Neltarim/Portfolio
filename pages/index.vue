@@ -160,9 +160,19 @@
 
     <div class="mt-10 text-white font-kdam tracking-wide">
 
+
+      <HistoryLine :sepSize="'light'">
+        <h3 class="text-2xl mb-4">Formation GDscript / Godot</h3>
+        <p class="text-grey-light mb-4">Janvier 2026 - aujourd'hui, Achères 78260</p>
+        <ul class="my-2 list-disc lg:mr-6 lg:rtl ltr mr-0 mb-4">
+          <li>Apprentissage du moteur Godot</li>
+          <li>Développement d'un action-rpg topdown</li>
+        </ul>
+      </HistoryLine>
+
       <HistoryLine :alignRight="true" :sepSize="'big'">
         <h3 class="text-2xl mb-4">GROUPE WE</h3>
-        <p class="text-grey-light mb-4">Mars 2023 - Aujourd’hui , Marcoussis 91460 </p>
+        <p class="text-grey-light mb-4">Mars 2023 - Décembre 2025 , Marcoussis 91460 </p>
         <p>
           Développement de divers applications et sites web dont :
         </p>
@@ -368,6 +378,9 @@ export default {
 
 
 <style>
+html, body {
+  overflow-x: hidden;
+}
 html {
   background-color: #001622;
   background-image: url('/assets/images/main_background.png');

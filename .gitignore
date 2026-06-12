@@ -2,3 +2,4 @@
 .nuxt
 package-lock.json
 .output
+.output.zip
